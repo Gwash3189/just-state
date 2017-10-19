@@ -1,0 +1,78 @@
+{
+  "name": "state",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "author": "Adam Beck",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-jest": "^21.2.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "chai": "^4.1.2",
+    "enzyme": "^3.1.0",
+    "enzyme-adapter-react-16": "^1.0.2",
+    "jest": "^21.2.1",
+    "jest-dot-reporter": "^1.0.3",
+    "prettier": "^1.7.4",
+    "react-dom": "^16.0.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "prop-types": "^15.6.0",
+    "react": "^16.0.0"
+  },
+  "scripts": {
+    "make": "babel src -d lib",
+    "test": "NODE_ENV=test jest",
+    "test:cover": "NODE_ENV=test jest --coverage",
+    "test:watch": "NODE_ENV=test npm run test -- --watch",
+    "pretty:src": "prettier --single-quote --no-semi --write 'src/**/*.js'",
+    "pretty:test": "prettier --single-quote --no-semi --write 'test/**/*.js'",
+    "pretty:examples": "prettier --single-quote --no-semi --write 'examples/**/*.js'",
+    "pretty": "yarn pretty:src && yarn pretty:test && yarn pretty:examples",
+    "precommit": "yarn run pretty && yarn run test:cover && yarn make"
+  },
+  "babel": {
+    "presets": ["react", "env"],
+    "plugins": ["transform-object-rest-spread"]
+  },
+  "jest": {
+    "moduleDirectories": [
+      "src",
+      "<rootDir>/node_modules"
+    ],
+    "setupFiles": [
+      "<rootDir>/test/support/shims.js",
+      "<rootDir>/test/support/setup.js"
+    ],
+    "transform": {
+      "^.+\\.js$": "<rootDir>/node_modules/babel-jest"
+    },
+    "moduleFileExtensions": [
+      "js"
+    ],
+    "testMatch": [
+      "<rootDir>/test/**/*_test.js"
+    ],
+    "coverageDirectory": "coverage/js",
+    "coverageReporters": [
+      "json",
+      "html",
+      "text"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "lines": 100
+      }
+    },
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/node_modules/"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{js}",
+      "!<rootDir>/node_modules/"
+    ]
+  }
+}
