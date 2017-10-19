@@ -20,6 +20,7 @@
   "root": true,
   "parser": "babel-eslint",
   "rules": {
+    "no-console": [0],
     "arrow-spacing": [2, { "before": true, "after": true }],
     "brace-style": [2, "1tbs", { "allowSingleLine": true }],
     "camelcase": 2,
