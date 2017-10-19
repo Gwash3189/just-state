@@ -11,6 +11,16 @@ export default class Connect extends Component {
     this.updateState = this.updateState.bind(this)
   }
 
+  /**
+   * A variatic function that chains the provided functions together
+   * and updates the state of the provided component
+   *
+   * The functions provided must take the entire state tree and either return the new
+   * state tree, or a promise that resolves to the new state tree
+   *
+   * @param  {...[(state) => any | Promise]} funcs N number of functions that mutate the state and return the entire state tree
+   * @return {Promise}                       A promise that is either resolved or rejected when the state update is complete
+   */
   updateState(...funcs) {
     const { logStateChange } = this.props
     // composes all functions together from left to right
