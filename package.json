@@ -39,7 +39,7 @@
     "pretty:test": "prettier --single-quote --no-semi --write 'test/**/*.js'",
     "pretty:examples": "prettier --single-quote --no-semi --write 'examples/**/*.js'",
     "pretty": "yarn pretty:src && yarn pretty:test && yarn pretty:examples",
-    "precommit": "yarn lint && yarn run pretty && yarn run test:cover && yarn make"
+    "precommit": "yarn run pretty && yarn run test:cover && yarn lint && yarn make"
   },
   "babel": {
     "presets": [
