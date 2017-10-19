@@ -1,0 +1,37 @@
+{
+  "manifest": {
+    "name": "babel-jest",
+    "description": "Jest plugin to use babel for transformation.",
+    "version": "21.2.0",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/facebook/jest.git"
+    },
+    "license": "MIT",
+    "main": "build/index.js",
+    "dependencies": {
+      "babel-plugin-istanbul": "^4.0.0",
+      "babel-preset-jest": "^21.2.0"
+    },
+    "devDependencies": {
+      "babel-core": "^6.0.0"
+    },
+    "peerDependencies": {
+      "babel-core": "^6.0.0 || ^7.0.0-alpha || ^7.0.0-beta || ^7.0.0"
+    },
+    "_registry": "npm",
+    "_loc": "cache/v1/npm-babel-jest-21.2.0-2ce059519a9374a2c46f2455b6fbef5ad75d863e/package.json",
+    "readmeFilename": "README.md",
+    "readme": "# babel-jest\n\n[Babel](https://github.com/babel/babel) [jest](https://github.com/facebook/jest) plugin\n\n## Usage\n\nIf you are already using `jest-cli`, just add `babel-jest` and it will automatically compile JavaScript code using babel.\n\n```\nnpm install --save-dev babel-jest\n```\n\nIf you would like to write your own preprocessor, uninstall and delete babel-jest and set the [config.transform](http://facebook.github.io/jest/docs/configuration.html#transform-object-string-string) option to your preprocessor.\n\n## Setup\n\n*Note: this step is only required if you are using `babel-jest` with additional code preprocessors.*\n\nTo explicitly define `babel-jest` as a transformer for your JavaScript code, map *.js* files to the `babel-jest` module.\n\n```json\n\"transform\": {\n  \"^.+\\\\.jsx?$\": \"babel-jest\"\n},\n```\n"
+  },
+  "artifacts": [],
+  "remote": {
+    "resolved": "https://registry.yarnpkg.com/babel-jest/-/babel-jest-21.2.0.tgz#2ce059519a9374a2c46f2455b6fbef5ad75d863e",
+    "type": "tarball",
+    "reference": "https://registry.yarnpkg.com/babel-jest/-/babel-jest-21.2.0.tgz",
+    "hash": "2ce059519a9374a2c46f2455b6fbef5ad75d863e",
+    "registry": "npm"
+  },
+  "registry": "npm",
+  "hash": "2ce059519a9374a2c46f2455b6fbef5ad75d863e"
+}

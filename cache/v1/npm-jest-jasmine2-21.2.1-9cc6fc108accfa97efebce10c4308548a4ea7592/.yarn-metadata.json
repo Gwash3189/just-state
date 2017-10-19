@@ -1,0 +1,37 @@
+{
+  "manifest": {
+    "name": "jest-jasmine2",
+    "version": "21.2.1",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/facebook/jest.git"
+    },
+    "license": "MIT",
+    "main": "build/index.js",
+    "dependencies": {
+      "chalk": "^2.0.1",
+      "expect": "^21.2.1",
+      "graceful-fs": "^4.1.11",
+      "jest-diff": "^21.2.1",
+      "jest-matcher-utils": "^21.2.1",
+      "jest-message-util": "^21.2.1",
+      "jest-snapshot": "^21.2.1",
+      "p-cancelable": "^0.3.0"
+    },
+    "devDependencies": {
+      "jest-runtime": "^21.2.1"
+    },
+    "_registry": "npm",
+    "_loc": "cache/v1/npm-jest-jasmine2-21.2.1-9cc6fc108accfa97efebce10c4308548a4ea7592/package.json"
+  },
+  "artifacts": [],
+  "remote": {
+    "resolved": "https://registry.yarnpkg.com/jest-jasmine2/-/jest-jasmine2-21.2.1.tgz#9cc6fc108accfa97efebce10c4308548a4ea7592",
+    "type": "tarball",
+    "reference": "https://registry.yarnpkg.com/jest-jasmine2/-/jest-jasmine2-21.2.1.tgz",
+    "hash": "9cc6fc108accfa97efebce10c4308548a4ea7592",
+    "registry": "npm"
+  },
+  "registry": "npm",
+  "hash": "9cc6fc108accfa97efebce10c4308548a4ea7592"
+}

@@ -1,0 +1,51 @@
+{
+  "manifest": {
+    "name": "whatwg-encoding",
+    "description": "Decode strings according to the WHATWG Encoding Standard",
+    "keywords": [
+      "encoding",
+      "whatwg"
+    ],
+    "version": "1.0.1",
+    "author": {
+      "name": "Domenic Denicola",
+      "email": "d@domenic.me",
+      "url": "https://domenic.me/"
+    },
+    "license": "WTFPL",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/jsdom/whatwg-encoding.git"
+    },
+    "main": "lib/whatwg-encoding.js",
+    "files": [
+      "lib/"
+    ],
+    "scripts": {
+      "test": "mocha",
+      "lint": "eslint lib test",
+      "update": "node scripts/update.js"
+    },
+    "dependencies": {
+      "iconv-lite": "0.4.13"
+    },
+    "devDependencies": {
+      "eslint": "^3.8.0",
+      "got": "^6.5.0",
+      "mocha": "^3.1.2"
+    },
+    "_registry": "npm",
+    "_loc": "cache/v1/npm-whatwg-encoding-1.0.1-3c6c451a198ee7aec55b1ec61d0920c67801a5f4/package.json",
+    "licenseText": "Copyright © 2016 Domenic Denicola <d@domenic.me>\n\nThis work is free. You can redistribute it and/or modify it under the\nterms of the Do What The Fuck You Want To Public License, Version 2,\nas published by Sam Hocevar. See below for more details.\n\n        DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE\n                    Version 2, December 2004\n\n Copyright (C) 2004 Sam Hocevar <sam@hocevar.net>\n\n Everyone is permitted to copy and distribute verbatim or modified\n copies of this license document, and changing it is allowed as long\n as the name is changed.\n\n            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE\n   TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION\n\n  0. You just DO WHAT THE FUCK YOU WANT TO.\n"
+  },
+  "artifacts": [],
+  "remote": {
+    "resolved": "https://registry.yarnpkg.com/whatwg-encoding/-/whatwg-encoding-1.0.1.tgz#3c6c451a198ee7aec55b1ec61d0920c67801a5f4",
+    "type": "tarball",
+    "reference": "https://registry.yarnpkg.com/whatwg-encoding/-/whatwg-encoding-1.0.1.tgz",
+    "hash": "3c6c451a198ee7aec55b1ec61d0920c67801a5f4",
+    "registry": "npm"
+  },
+  "registry": "npm",
+  "hash": "3c6c451a198ee7aec55b1ec61d0920c67801a5f4"
+}

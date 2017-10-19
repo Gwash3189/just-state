@@ -1,0 +1,27 @@
+{
+  "manifest": {
+    "name": "jest-resolve-dependencies",
+    "version": "21.2.0",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/facebook/jest.git"
+    },
+    "license": "MIT",
+    "main": "build/index.js",
+    "dependencies": {
+      "jest-regex-util": "^21.2.0"
+    },
+    "_registry": "npm",
+    "_loc": "cache/v1/npm-jest-resolve-dependencies-21.2.0-9e231e371e1a736a1ad4e4b9a843bc72bfe03d09/package.json"
+  },
+  "artifacts": [],
+  "remote": {
+    "resolved": "https://registry.yarnpkg.com/jest-resolve-dependencies/-/jest-resolve-dependencies-21.2.0.tgz#9e231e371e1a736a1ad4e4b9a843bc72bfe03d09",
+    "type": "tarball",
+    "reference": "https://registry.yarnpkg.com/jest-resolve-dependencies/-/jest-resolve-dependencies-21.2.0.tgz",
+    "hash": "9e231e371e1a736a1ad4e4b9a843bc72bfe03d09",
+    "registry": "npm"
+  },
+  "registry": "npm",
+  "hash": "9e231e371e1a736a1ad4e4b9a843bc72bfe03d09"
+}

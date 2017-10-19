@@ -1,0 +1,53 @@
+{
+  "manifest": {
+    "name": "xml-name-validator",
+    "description": "Validates whether a string matches the production for an XML name or qualified name",
+    "keywords": [
+      "xml",
+      "name",
+      "qname"
+    ],
+    "version": "2.0.1",
+    "author": {
+      "name": "Domenic Denicola",
+      "email": "d@domenic.me",
+      "url": "https://domenic.me/"
+    },
+    "license": "WTFPL",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/jsdom/xml-name-validator.git"
+    },
+    "main": "lib/xml-name-validator.js",
+    "files": [
+      "lib/"
+    ],
+    "scripts": {
+      "prepublish": "node scripts/generate-grammar.js < lib/grammar.pegjs > lib/generated-parser.js",
+      "pretest": "npm run prepublish",
+      "test": "mocha",
+      "lint": "jshint lib && jscs lib"
+    },
+    "devDependencies": {
+      "jscs": "^1.8.1",
+      "jshint": "^2.5.10",
+      "mocha": "^2.0.1",
+      "waka": "0.1.2"
+    },
+    "_registry": "npm",
+    "_loc": "cache/v1/npm-xml-name-validator-2.0.1-4d8b8f1eccd3419aa362061becef515e1e559635/package.json",
+    "readmeFilename": "README.md",
+    "readme": "# Validate XML Names and Qualified Names\n\nThis package simply tells you whether or not a string matches the [`Name`](http://www.w3.org/TR/xml/#NT-Name) or [`QName`](http://www.w3.org/TR/xml-names/#NT-QName) productions in the XML Namespaces specification. We use it for implementing the [validate](https://dom.spec.whatwg.org/#validate) algorithm in jsdom, but you can use it for whatever you want.\n\n## Usage\n\nThis package's main module's default export takes a string and will return an object of the form `{ success, error }`, where `success` is a boolean and if it is `false`, then `error` is a string containing some hint as to where the match went wrong.\n\n```js\n\"use strict\":\nvar xnv = require(\"xml-name-validator\");\nvar assert = require(\"assert\");\n\n// Will return { success: true, error: undefined }\nxnv.name(\"x\");\nxnv.name(\":\");\nxnv.name(\"a:0\");\nxnv.name(\"a:b:c\");\n\n// Will return { success: false, error: <an explanatory string> }\nxnv.name(\"\\\\\");\nxnv.name(\"'\");\nxnv.name(\"0\");\nxnv.name(\"a!\");\n\n// Will return { success: true, error: undefined }\nxnv.qname(\"x\");\nxnv.qname(\"a0\");\nxnv.qname(\"a:b\");\n\n// Will return { success: false, error: <an explanatory string> }\nxnv.qname(\":a\");\nxnv.qname(\":b\");\nxnv.qname(\"a:b:c\");\nxnv.qname(\"a:0\");\n```\n",
+    "licenseText": "Copyright © 2014–2015 Domenic Denicola <d@domenic.me>\n\nThis work is free. You can redistribute it and/or modify it under the\nterms of the Do What The Fuck You Want To Public License, Version 2,\nas published by Sam Hocevar. See below for more details.\n\n        DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE\n                    Version 2, December 2004\n\n Copyright (C) 2004 Sam Hocevar <sam@hocevar.net>\n\n Everyone is permitted to copy and distribute verbatim or modified\n copies of this license document, and changing it is allowed as long\n as the name is changed.\n\n            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE\n   TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION\n\n  0. You just DO WHAT THE FUCK YOU WANT TO.\n"
+  },
+  "artifacts": [],
+  "remote": {
+    "resolved": "https://registry.yarnpkg.com/xml-name-validator/-/xml-name-validator-2.0.1.tgz#4d8b8f1eccd3419aa362061becef515e1e559635",
+    "type": "tarball",
+    "reference": "https://registry.yarnpkg.com/xml-name-validator/-/xml-name-validator-2.0.1.tgz",
+    "hash": "4d8b8f1eccd3419aa362061becef515e1e559635",
+    "registry": "npm"
+  },
+  "registry": "npm",
+  "hash": "4d8b8f1eccd3419aa362061becef515e1e559635"
+}

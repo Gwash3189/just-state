@@ -1,0 +1,63 @@
+{
+  "manifest": {
+    "name": "jest",
+    "description": "Delightful JavaScript Testing.",
+    "version": "21.2.1",
+    "main": "build/jest.js",
+    "dependencies": {
+      "jest-cli": "^21.2.1"
+    },
+    "bin": {
+      "jest": "./bin/jest.js"
+    },
+    "engines": {
+      "node": ">= 4"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/facebook/jest"
+    },
+    "homepage": "http://facebook.github.io/jest/",
+    "license": "MIT",
+    "keywords": [
+      "ava",
+      "babel",
+      "coverage",
+      "easy",
+      "expect",
+      "facebook",
+      "immersive",
+      "instant",
+      "jasmine",
+      "jest",
+      "jsdom",
+      "mocha",
+      "mocking",
+      "painless",
+      "qunit",
+      "runner",
+      "sandboxed",
+      "snapshot",
+      "tap",
+      "tape",
+      "test",
+      "testing",
+      "typescript",
+      "watch"
+    ],
+    "_registry": "npm",
+    "_loc": "cache/v1/npm-jest-21.2.1-c964e0b47383768a1438e3ccf3c3d470327604e1/package.json",
+    "readmeFilename": "README.md",
+    "readme": "# Jest\n\n🃏 Delightful JavaScript Testing\n\n- **👩🏻‍💻 Easy Setup**: Jest is a complete and easy to set up JavaScript testing solution. In fact, Jest works out of the box for any React project.\n\n- **🏃🏽 Instant Feedback**: Failed tests run first. Fast interactive mode can switch between running all tests or only test files related to changed files.\n\n- **📸 Snapshot Testing**: Jest can [capture snapshots](http://facebook.github.io/jest/docs/snapshot-testing.html) of React trees or other serializable values to simplify UI testing.\n\nRead More: http://facebook.github.io/jest/\n"
+  },
+  "artifacts": [],
+  "remote": {
+    "resolved": "https://registry.yarnpkg.com/jest/-/jest-21.2.1.tgz#c964e0b47383768a1438e3ccf3c3d470327604e1",
+    "type": "tarball",
+    "reference": "https://registry.yarnpkg.com/jest/-/jest-21.2.1.tgz",
+    "hash": "c964e0b47383768a1438e3ccf3c3d470327604e1",
+    "registry": "npm"
+  },
+  "registry": "npm",
+  "hash": "c964e0b47383768a1438e3ccf3c3d470327604e1"
+}

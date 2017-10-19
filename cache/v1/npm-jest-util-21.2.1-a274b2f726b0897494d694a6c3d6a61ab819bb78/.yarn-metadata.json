@@ -1,0 +1,33 @@
+{
+  "manifest": {
+    "name": "jest-util",
+    "version": "21.2.1",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/facebook/jest.git"
+    },
+    "license": "MIT",
+    "main": "build/index.js",
+    "dependencies": {
+      "callsites": "^2.0.0",
+      "chalk": "^2.0.1",
+      "graceful-fs": "^4.1.11",
+      "jest-message-util": "^21.2.1",
+      "jest-mock": "^21.2.0",
+      "jest-validate": "^21.2.1",
+      "mkdirp": "^0.5.1"
+    },
+    "_registry": "npm",
+    "_loc": "cache/v1/npm-jest-util-21.2.1-a274b2f726b0897494d694a6c3d6a61ab819bb78/package.json"
+  },
+  "artifacts": [],
+  "remote": {
+    "resolved": "https://registry.yarnpkg.com/jest-util/-/jest-util-21.2.1.tgz#a274b2f726b0897494d694a6c3d6a61ab819bb78",
+    "type": "tarball",
+    "reference": "https://registry.yarnpkg.com/jest-util/-/jest-util-21.2.1.tgz",
+    "hash": "a274b2f726b0897494d694a6c3d6a61ab819bb78",
+    "registry": "npm"
+  },
+  "registry": "npm",
+  "hash": "a274b2f726b0897494d694a6c3d6a61ab819bb78"
+}

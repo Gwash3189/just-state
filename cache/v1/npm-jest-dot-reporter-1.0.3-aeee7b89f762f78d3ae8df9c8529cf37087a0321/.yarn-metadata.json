@@ -1,0 +1,58 @@
+{
+  "manifest": {
+    "name": "jest-dot-reporter",
+    "version": "1.0.3",
+    "description": "Simple Dot reporter for Jest",
+    "main": "./lib/index.js",
+    "scripts": {
+      "test": "jest",
+      "example": "cd example/ && jest"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/pierreroth64/jest-dot-reporter.git"
+    },
+    "keywords": [
+      "jest",
+      "dot",
+      "reporter"
+    ],
+    "author": {
+      "name": "Peio Roth"
+    },
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/pierreroth64/jest-dot-reporter/issues"
+    },
+    "homepage": "https://github.com/pierreroth64/jest-dot-reporter#readme",
+    "dependencies": {
+      "chalk": "2.1.0",
+      "moment": "2.18.1",
+      "progress": "2.0.0"
+    },
+    "devDependencies": {
+      "jest": "21.2.1"
+    },
+    "jest": {
+      "testPathIgnorePatterns": [
+        "/node_modules/",
+        "/example/"
+      ]
+    },
+    "_registry": "npm",
+    "_loc": "cache/v1/npm-jest-dot-reporter-1.0.3-aeee7b89f762f78d3ae8df9c8529cf37087a0321/package.json",
+    "readmeFilename": "README.md",
+    "readme": "# Simple dot reporter for jest [![Build Status](https://travis-ci.org/pierreroth64/jest-dot-reporter.svg?branch=master)](https://travis-ci.org/pierreroth64/jest-dot-reporter) [![npm version](https://badge.fury.io/js/jest-dot-reporter.svg)](https://badge.fury.io/js/jest-dot-reporter)\n\n## Installation\n\nYou may install this package as a development dependency:\n\n```bash\nnpm install --save-dev jest-dot-reporter\n```\n\n⚠ Tested with Node 8.4 and Jest 21.2.1\n\n## Configuration\n\nConfigure [Jest](https://facebook.github.io/jest/docs/en/configuration.html) to use the reporter.\n\nFor example, create a `jest.config.js` file containing:\n\n```javascript\nmodule.exports = {\n  verbose: false,\n  testPathIgnorePatterns: [\n    '/node_modules/',\n  ],\n  reporters: [\n    'jest-dot-reporter'\n  ]\n};\n```\n\nYou can checkout the expected output:\n\n```bash\ngit clone https://github.com/pierreroth64/jest-dot-reporter.git\ncd jest-dot-reporter\nnpm install\nnpm run example\n```\n\n![Test run](./example/dot.gif?raw=true \"Test run\")\n",
+    "licenseText": "MIT License\n\nCopyright (c) 2017 Peio Roth\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
+  },
+  "artifacts": [],
+  "remote": {
+    "resolved": "https://registry.yarnpkg.com/jest-dot-reporter/-/jest-dot-reporter-1.0.3.tgz#aeee7b89f762f78d3ae8df9c8529cf37087a0321",
+    "type": "tarball",
+    "reference": "https://registry.yarnpkg.com/jest-dot-reporter/-/jest-dot-reporter-1.0.3.tgz",
+    "hash": "aeee7b89f762f78d3ae8df9c8529cf37087a0321",
+    "registry": "npm"
+  },
+  "registry": "npm",
+  "hash": "aeee7b89f762f78d3ae8df9c8529cf37087a0321"
+}
