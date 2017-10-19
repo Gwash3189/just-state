@@ -1,3 +1,9 @@
+/**
+ * @module logger
+ * @example
+ * import logger from './logger'
+ */
+
 import uniqueId from 'lodash/uniqueId'
 
 const stateChangeId = () => {

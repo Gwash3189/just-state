@@ -1,10 +1,16 @@
+/**
+ * @module selector
+ * @example
+ * import selector from './selector'
+ */
+
 import get from 'lodash/get'
+
 
 /**
  * A proxy to `lodash/get` as a convience for creating state selectors
- * https://lodash.com/docs/4.17.4#get
- *
  * @curried
+ * @external https://lodash.com/docs/4.17.4#get
  * @param  {string} path         The path to be traversed on the provided object
  * @param  {object} obj          The object to be traversed
  * @param  {any}    defaultValue The default value to be returned in the path resolves to undefined

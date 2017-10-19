@@ -1,3 +1,9 @@
+/**
+ * @module connect
+ * @example
+ * import Connect from './connect'
+ */
+
 import cloneDeep from 'lodash/cloneDeep'
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
@@ -16,16 +22,23 @@ export default class Connect extends Component {
   }
 
   /**
+   * A state mutation method that has the signature of `(state) => any | Promise<any>`
+   * @typedef {Function} StateMutation
+   */
+
+  /**
    * A variatic function that chains the provided functions together
    * and updates the state of the provided component
    *
    * The functions provided must take the entire state tree and either return the new
    * state tree, or a promise that resolves to the new state tree
    *
-   * @param  {...[(state) => any | Promise<any>]} funcs N number of functions that mutate the
-   *                                                    state and return the entire state tree
-   * @return {Promise}                                  A promise that is either resolved or
-   *                                                    rejected when the state update is complete
+   * @param  {StateMutation[]} funcs N number of functions that mutate the state and return the
+   *                                 entire state tree
+   * @return {Promise}         A promise that is either resolved or rejected when the state
+   *                           update is complete
+   * @fulfuil {object} - The state tree
+   * @reject  {Error} - The error generator by the error
    */
   updateState(...funcs) {
     const { logStateChange } = this.props
