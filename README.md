@@ -2,6 +2,8 @@
 A simpler state management pattern for react
 
 # Usage
+See [`examples/counter`](./examples/counter) for a basic example
+See [`API.md`](./docs/API.md)
 
 # Contributing
 
