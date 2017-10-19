@@ -4,6 +4,10 @@ import React, { Component } from 'react'
 
 import logger from './logger'
 
+/**
+ * Connects the provided state and the provided component together.
+ * This class is used by the `state` function provided in `./state.js`
+ */
 export default class Connect extends Component {
   constructor(props) {
     super(props)
@@ -18,8 +22,10 @@ export default class Connect extends Component {
    * The functions provided must take the entire state tree and either return the new
    * state tree, or a promise that resolves to the new state tree
    *
-   * @param  {...[(state) => any | Promise]} funcs N number of functions that mutate the state and return the entire state tree
-   * @return {Promise}                       A promise that is either resolved or rejected when the state update is complete
+   * @param  {...[(state) => any | Promise<any>]} funcs N number of functions that mutate the
+   *                                                    state and return the entire state tree
+   * @return {Promise}                                  A promise that is either resolved or
+   *                                                    rejected when the state update is complete
    */
   updateState(...funcs) {
     const { logStateChange } = this.props
@@ -42,6 +48,11 @@ export default class Connect extends Component {
     })
   }
 
+  /**
+   * Renders the component provided on `this.props.component` with
+   * the updateState function, and the state derived from `mapStateToProps`
+   * @return {React.Node} An instance of the component provided on `this.props.component`
+   */
   render() {
     const Component = this.props.component
     const mapStateToProps = this.props.mapStateToProps

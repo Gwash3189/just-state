@@ -5,8 +5,14 @@ const stateChangeId = () => {
 }
 
 export default {
+  /**
+   * Logs state changes in a readable way
+   * @param  {Object}   newState the new state object
+   * @param  {Object}   oldState the old state object
+   * @param  {function} logger   A custom logger, if no logger is provided `console.log` is used
+   * @return {undefined}
+   */
   logStateChange: (newState, oldState, logger = console.log) => {
-    // eslint-disable-line no-console
     logger('=======================================')
     logger('starting state change: ', stateChangeId())
     logger('old state: ', oldState)
