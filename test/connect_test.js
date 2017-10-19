@@ -12,8 +12,7 @@ describe('Connect', () => {
         mapStateToProps={mapStateToPropsMock}
         state={stateMock}
         component={ComponentMock}
-        logStateChange={logStateChangeMock}
-      />
+        logStateChange={logStateChangeMock} />
     )
   }
 
