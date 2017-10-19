@@ -1,0 +1,30 @@
+{
+  "manifest": {
+    "name": "babel-helper-get-function-arity",
+    "version": "7.0.0-beta.0",
+    "description": "Helper function to get function arity",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/babel/babel/tree/master/packages/babel-helper-get-function-arity"
+    },
+    "license": "MIT",
+    "main": "lib/index.js",
+    "dependencies": {
+      "babel-types": "7.0.0-beta.0"
+    },
+    "_registry": "npm",
+    "_loc": "cache/v1/npm-babel-helper-get-function-arity-7.0.0-beta.0-9d1ab7213bb5efe1ef1638a8ea1489969b5a8b6e/package.json",
+    "readmeFilename": "README.md",
+    "readme": "# babel-helper-get-function-arity\n\n## Usage\n\nTODO\n"
+  },
+  "artifacts": [],
+  "remote": {
+    "resolved": "https://registry.yarnpkg.com/babel-helper-get-function-arity/-/babel-helper-get-function-arity-7.0.0-beta.0.tgz#9d1ab7213bb5efe1ef1638a8ea1489969b5a8b6e",
+    "type": "tarball",
+    "reference": "https://registry.yarnpkg.com/babel-helper-get-function-arity/-/babel-helper-get-function-arity-7.0.0-beta.0.tgz",
+    "hash": "9d1ab7213bb5efe1ef1638a8ea1489969b5a8b6e",
+    "registry": "npm"
+  },
+  "registry": "npm",
+  "hash": "9d1ab7213bb5efe1ef1638a8ea1489969b5a8b6e"
+}

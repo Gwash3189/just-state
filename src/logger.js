@@ -6,6 +6,7 @@ const stateChangeId = () => {
 
 export default {
   logStateChange: (newState, oldState, logger = console.log) => {
+    // eslint-disable-line no-console
     logger('=======================================')
     logger('starting state change: ', stateChangeId())
     logger('old state: ', oldState)

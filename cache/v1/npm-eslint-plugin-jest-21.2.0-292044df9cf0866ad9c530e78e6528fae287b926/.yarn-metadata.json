@@ -1,0 +1,40 @@
+{
+  "manifest": {
+    "name": "eslint-plugin-jest",
+    "version": "21.2.0",
+    "description": "Eslint rules for Jest",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/facebook/jest.git"
+    },
+    "license": "MIT",
+    "keywords": [
+      "eslint",
+      "eslintplugin",
+      "eslint-plugin"
+    ],
+    "author": {
+      "name": "Jonathan Kim",
+      "email": "hello@jkimbo.com",
+      "url": "jkimbo.com"
+    },
+    "main": "build/index.js",
+    "peerDependencies": {
+      "eslint": ">=3.6"
+    },
+    "_registry": "npm",
+    "_loc": "cache/v1/npm-eslint-plugin-jest-21.2.0-292044df9cf0866ad9c530e78e6528fae287b926/package.json",
+    "readmeFilename": "README.md",
+    "readme": "# eslint-plugin-jest\n\nEslint plugin for Jest\n\n## Installation\n\n```\n$ yarn add --dev eslint eslint-plugin-jest\n```\n\n**Note:** If you installed ESLint globally then you must also install `eslint-plugin-jest` globally.\n\n## Usage\n\nAdd `jest` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:\n\n```json\n{\n  \"plugins\": [\n    \"jest\"\n  ]\n}\n```\n\n\nThen configure the rules you want to use under the rules section.\n\n```json\n{\n  \"rules\": {\n    \"jest/no-disabled-tests\": \"warn\",\n    \"jest/no-focused-tests\": \"error\",\n    \"jest/no-identical-title\": \"error\",\n    \"jest/valid-expect\": \"error\"\n  }\n}\n```\n\nYou can also whitelist the environment variables provided by Jest by doing:\n\n```json\n{\n  \"env\": {\n    \"jest/globals\": true\n  }\n}\n```\n\n## Supported Rules\n\n- [no-disabled-tests](/packages/eslint-plugin-jest/docs/rules/no-disabled-tests.md) - disallow disabled tests.\n- [no-focused-tests](/packages/eslint-plugin-jest/docs/rules/no-focused-tests.md) - disallow focused tests.\n- [no-identical-title](/packages/eslint-plugin-jest/docs/rules/no-identical-title.md) - disallow identical titles.\n- [valid-expect](/packages/eslint-plugin-jest/docs/rules/valid-expect.md) - ensure expect is called correctly.\n\n## Shareable configurations\n\n### Recommended\n\nThis plugin exports a recommended configuration that enforces good testing practices.\n\nTo enable this configuration use the `extends` property in your `.eslintrc` config file:\n\n```json\n{\n  \"extends\": [\"plugin:jest/recommended\"]\n}\n```\n\nSee [ESLint documentation](http://eslint.org/docs/user-guide/configuring#extending-configuration-files) for more information about extending configuration files.\n\nThe rules enabled in this configuration are:\n\n- [jest/no-disabled-tests](/packages/eslint-plugin-jest/docs/rules/no-disabled-tests.md)\n- [jest/no-focused-tests](/packages/eslint-plugin-jest/docs/rules/no-focused-tests.md)\n- [jest/no-identical-title](/packages/eslint-plugin-jest/docs/rules/no-identical-title.md)\n- [jest/valid-expect](/packages/eslint-plugin-jest/docs/rules/valid-expect.md)\n\n## Credit\n\n* [eslint-plugin-mocha](https://github.com/lo1tuma/eslint-plugin-mocha)\n* [eslint-plugin-jasmine](https://github.com/tlvince/eslint-plugin-jasmine)\n"
+  },
+  "artifacts": [],
+  "remote": {
+    "resolved": "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-21.2.0.tgz#292044df9cf0866ad9c530e78e6528fae287b926",
+    "type": "tarball",
+    "reference": "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-21.2.0.tgz",
+    "hash": "292044df9cf0866ad9c530e78e6528fae287b926",
+    "registry": "npm"
+  },
+  "registry": "npm",
+  "hash": "292044df9cf0866ad9c530e78e6528fae287b926"
+}

@@ -32,8 +32,8 @@ describe('logger', () => {
     })
 
     it('logs out a unique id with each change', () => {
-      const [labelOne, idOne] = loggerMock.mock.calls[1]
-      const [labelTwo, idTwo] = loggerMock.mock.calls[6]
+      const idOne = loggerMock.mock.calls[1][1]
+      const idTwo = loggerMock.mock.calls[6][1]
 
       expect(idOne).to.not.eql(idTwo)
     })

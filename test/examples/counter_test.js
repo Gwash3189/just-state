@@ -4,14 +4,13 @@ import React from 'react'
 import { shallow } from 'enzyme'
 
 describe('Counter', () => {
-  let output, updateStateMock, initialState, expectedState, stateMock
+  let output, updateStateMock, initialState, expectedState
 
-  const renderCounter = (props = {}) => {
+  const renderCounter = () => {
     return shallow(<Counter updateState={updateStateMock} count={0} />)
   }
 
   beforeEach(() => {
-    stateMock = 0
     updateStateMock = func => {
       expectedState = func(initialState)
     }

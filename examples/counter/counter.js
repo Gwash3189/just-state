@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { state } from './../../src/index'
 import { updateCount } from './updaters'
 import { selectCount } from './selectors'
+import initialCountState from './state'
 
 export class Counter extends Component {
   increment() {
@@ -39,4 +40,4 @@ Counter.mapStateToProps = state => ({
   count: selectCount(state)
 })
 
-export default state({ count: 0 })(Counter)
+export default state(initialCountState)(Counter)

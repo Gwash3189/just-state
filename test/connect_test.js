@@ -6,7 +6,7 @@ import Connect from '../src/connect'
 describe('Connect', () => {
   let output, logStateChangeMock, stateMock, ComponentMock, mapStateToPropsMock
 
-  const renderConnect = (props = {}) => {
+  const renderConnect = () => {
     return shallow(
       <Connect
         mapStateToProps={mapStateToPropsMock}
@@ -22,7 +22,7 @@ describe('Connect', () => {
     stateMock = { count: 1 }
     mapStateToPropsMock = jest.fn(state => ({ ...state }))
     logStateChangeMock = jest.fn()
-    ComponentMock = ({ count }) => <h1> {count} </h1>
+    ComponentMock = ({ count }) => <h1> {count} </h1> // eslint-disable-line react/prop-types
 
     output = renderConnect()
   })
@@ -59,7 +59,7 @@ describe('Connect', () => {
     }
 
     const asyncChange = state => {
-      return new Promise((resolve, reject) => {
+      return new Promise(resolve => {
         setTimeout(() => {
           resolve({ count: state.count + 1 })
         }, 5)

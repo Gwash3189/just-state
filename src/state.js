@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import Connect from './connect.js'
+import React from 'react'
+import Connect from './connect'
 import identity from 'lodash/identity'
 
 export default state => (Component, mapStateToProps = identity) => {

@@ -1,13 +1,10 @@
 import cloneDeep from 'lodash/cloneDeep'
-import uniqueId from 'lodash/uniqueId'
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 
 import logger from './logger'
 
-const isPromise = x => typeof x.then === 'function'
-
-export default class Connect extends React.Component {
+export default class Connect extends Component {
   constructor(props) {
     super(props)
     this.state = cloneDeep(props.state)
@@ -21,6 +18,7 @@ export default class Connect extends React.Component {
     const promisedChange = funcs.reduce((foldedState, func) => {
       const change = foldedState.then(state => {
         logStateChange(foldedState, state)
+
         return Promise.resolve(func(state))
       })
 
