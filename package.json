@@ -20,6 +20,7 @@
     "eslint-plugin-react": "^7.4.0",
     "jest": "^21.2.1",
     "jest-dot-reporter": "^1.0.3",
+    "jsdoc-to-markdown": "^3.0.0",
     "prettier": "^1.7.4",
     "react-dom": "^16.0.0"
   },
@@ -39,7 +40,8 @@
     "pretty:test": "prettier --single-quote --no-semi --write 'test/**/*.js'",
     "pretty:examples": "prettier --single-quote --no-semi --write 'examples/**/*.js'",
     "pretty": "yarn pretty:src && yarn pretty:test && yarn pretty:examples",
-    "precommit": "yarn run pretty && yarn run test:cover && yarn lint && yarn make"
+    "precommit": "yarn run pretty && yarn run test:cover && yarn lint && yarn make && yarn docs",
+    "docs": "node ./bin/generate-docs.js"
   },
   "babel": {
     "presets": [
