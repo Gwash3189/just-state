@@ -6,7 +6,6 @@
 
 import set from 'lodash/set'
 
-
 /**
  * A proxy to `lodash/set` as a convience for creating state setters
  * This method sets the value on the object, and then returns the provided object
@@ -19,7 +18,8 @@ import set from 'lodash/set'
  *
  * @example
  * import createSetter from './setter'
- * createSetter('a.b.c')({ a: { b: { c: 'hello!' } } }, 'goodbye!') // { a: { b: { c: 'goodbye!' } } }
+ * createSetter('a.b.c')({ a: { b: { c: 'hello!' } } }, 'goodbye!')
+ * // { a: { b: { c: 'goodbye!' } } }
  */
 export default path => (obj, value) => {
   set(obj, path, value)

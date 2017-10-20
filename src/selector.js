@@ -6,7 +6,6 @@
 
 import get from 'lodash/get'
 
-
 /**
  * A proxy to `lodash/get` as a convience for creating state selectors
  * @curried

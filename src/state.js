@@ -8,7 +8,6 @@ import React from 'react'
 import Connect from './connect'
 import identity from 'lodash/identity'
 
-
 /**
  * The main interface of connecting a React Component.
  * Passes the `state`, `component` and the `mapStateToProps`

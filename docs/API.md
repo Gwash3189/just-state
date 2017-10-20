@@ -44,12 +44,14 @@ This class is used by the `state` function provided in `./state.js`
 A variatic function that chains the provided functions together
 and updates the state of the provided component
 
-The functions provided must take the entire state tree and either return the new
-state tree, or a promise that resolves to the new state tree
+The functions provided must take the entire state tree.
+They must either return the new state tree, or a promise
+that resolves to the new state tree
 
 **Kind**: instance method of [<code>module.exports</code>](#exp_module_connect--module.exports)  
 **Returns**: <code>Promise</code> - A promise that is either resolved or rejected when the state
-                          update is complete  
+                          update is complete. The promise is rejected when an error occurs
+                          during the state update process.  
 **Fulfuil**: <code>object</code> - The state tree  
 **Reject**: <code>Error</code> - The error generator by the error  
 
@@ -68,7 +70,7 @@ the updateState function, and the state derived from `mapStateToProps`
 <a name="module_connect--module.exports..StateMutation"></a>
 
 #### module.exports~StateMutation : <code>function</code>
-A state mutation method that has the signature of `(state) => any | Promise<any>`
+A state mutation method that has the signature of `(state) => newState | Promise<any>`
 
 **Kind**: inner typedef of [<code>module.exports</code>](#exp_module_connect--module.exports)  
 <a name="module_just-state"></a>
@@ -155,8 +157,8 @@ This method sets the value on the object, and then returns the provided object
 **Example**  
 ```js
 import createSetter from './setter'
-createSetter('a.b.c')({ a: { b: { c: 'hello!' } } }) // 'hello'
-createSetter('a.b.c.e')({ a: { b: { c: 'hello!' } } }, 'nothing here') // 'nothing here'
+createSetter('a.b.c')({ a: { b: { c: 'hello!' } } }, 'goodbye!')
+// { a: { b: { c: 'goodbye!' } } }
 ```
 <a name="module_module"></a>
 
