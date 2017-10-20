@@ -106,12 +106,57 @@ Logs state changes in a readable way
 ```js
 import selector from './selector'
 ```
+<a name="exp_module_selector--module.exports"></a>
+
+### module.exports(path, obj, defaultValue) ⇒ <code>any</code> ⏏
+A proxy to `lodash/get` as a convience for creating state selectors
+
+**Kind**: Exported function  
+**Returns**: <code>any</code> - The value that lives at the end of the path on the provided object  
+**Curried**:   
+**See**: https://lodash.com/docs/4.17.4#get  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| path | <code>string</code> | The path to be traversed on the provided object |
+| obj | <code>object</code> | The object to be traversed |
+| defaultValue | <code>any</code> | The default value to be returned in the path resolves to undefined |
+
+**Example**  
+```js
+import createSelector from './selector'
+createSelector('a.b.c')({ a: { b: { c: 'hello!' } } }) // 'hello'
+createSelector('a.b.c.e')({ a: { b: { c: 'hello!' } } }, 'nothing here') // 'nothing here'
+```
 <a name="module_setter"></a>
 
 ## setter
 **Example**  
 ```js
 import setter from './setter'
+```
+<a name="exp_module_setter--module.exports"></a>
+
+### module.exports(path, obj, value) ⇒ <code>any</code> ⏏
+A proxy to `lodash/set` as a convience for creating state setters
+This method sets the value on the object, and then returns the provided object
+
+**Kind**: Exported function  
+**Returns**: <code>any</code> - The original object provided  
+**Curried**:   
+**See**: https://lodash.com/docs/4.17.4#set  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| path | <code>string</code> | The path to be traversed on the provided object |
+| obj | <code>object</code> | The object to be traversed |
+| value | <code>any</code> | The value to be set on the provided object |
+
+**Example**  
+```js
+import createSetter from './setter'
+createSetter('a.b.c')({ a: { b: { c: 'hello!' } } }) // 'hello'
+createSetter('a.b.c.e')({ a: { b: { c: 'hello!' } } }, 'nothing here') // 'nothing here'
 ```
 <a name="module_module"></a>
 
