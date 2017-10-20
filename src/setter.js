@@ -19,8 +19,7 @@ import set from 'lodash/set'
  *
  * @example
  * import createSetter from './setter'
- * createSetter('a.b.c')({ a: { b: { c: 'hello!' } } }) // 'hello'
- * createSetter('a.b.c.e')({ a: { b: { c: 'hello!' } } }, 'nothing here') // 'nothing here'
+ * createSetter('a.b.c')({ a: { b: { c: 'hello!' } } }, 'goodbye!') // { a: { b: { c: 'goodbye!' } } }
  */
 export default path => (obj, value) => {
   set(obj, path, value)
