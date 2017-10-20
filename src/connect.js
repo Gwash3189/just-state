@@ -22,7 +22,7 @@ export default class Connect extends Component {
   }
 
   /**
-   * A state mutation method that has the signature of `(state) => any | Promise<any>`
+   * A state mutation method that has the signature of `(state) => newState | Promise<any>`
    * @typedef {Function} StateMutation
    */
 
@@ -30,13 +30,16 @@ export default class Connect extends Component {
    * A variatic function that chains the provided functions together
    * and updates the state of the provided component
    *
-   * The functions provided must take the entire state tree and either return the new
-   * state tree, or a promise that resolves to the new state tree
+   * The functions provided must take the entire state tree.
+   * They must either return the new state tree, or a promise
+   * that resolves to the new state tree
    *
    * @param  {StateMutation[]} funcs N number of functions that mutate the state and return the
    *                                 entire state tree
    * @return {Promise}         A promise that is either resolved or rejected when the state
-   *                           update is complete
+   *                           update is complete. The promise is rejected when an error occurs
+   *                           during the state update process.
+   *
    * @fulfuil {object} - The state tree
    * @reject  {Error} - The error generator by the error
    */
