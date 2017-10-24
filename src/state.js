@@ -27,6 +27,7 @@ export default state => (Component, mapStateToProps = identity) => {
     <Connect
       state={state}
       mapStateToProps={mapStateToProps}
-      component={Component} />
+      component={Component}
+    />
   )
 }
