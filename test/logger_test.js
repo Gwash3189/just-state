@@ -9,7 +9,7 @@ describe('logger', () => {
     newState = {}
     oldState = {}
 
-    logger.logStateChange(newState, oldState, loggerMock)
+    logger(newState, oldState, loggerMock)
   })
 
   it('logs out the new state', () => {
@@ -28,7 +28,7 @@ describe('logger', () => {
 
   describe('when there are multiple changes', () => {
     beforeEach(() => {
-      logger.logStateChange(newState, oldState, loggerMock)
+      logger(newState, oldState, loggerMock)
     })
 
     it('logs out a unique id with each change', () => {
@@ -41,7 +41,7 @@ describe('logger', () => {
 
   describe('when not using a fake logger', () => {
     it("doesn't blow up", () => {
-      expect(() => logger.logStateChange(newState, oldState)).to.not.throw
+      expect(() => logger(newState, oldState)).to.not.throw
     })
   })
 })

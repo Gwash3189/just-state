@@ -22,7 +22,7 @@ export default class Connect extends Component {
   }
 
   /**
-   * A state mutation method that has the signature of `(state) => newState | Promise<any>`
+   * A state mutation method that has the signature of `(state, id) => newState | Promise<any>`
    * @typedef {Function} StateMutation
    */
 
@@ -49,9 +49,9 @@ export default class Connect extends Component {
     // assuming all state changes are async
     const promisedChange = funcs.reduce((foldedState, func) => {
       const change = foldedState.then(state => {
-        logStateChange(foldedState, state)
+        const id = logStateChange(foldedState, state)
 
-        return Promise.resolve(func(state))
+        return Promise.resolve(func(state, id))
       })
 
       return change
@@ -79,7 +79,7 @@ export default class Connect extends Component {
 }
 
 Connect.defaultProps = {
-  logStateChange: logger.logStateChange
+  logStateChange: logger
 }
 
 Connect.propTypes = {

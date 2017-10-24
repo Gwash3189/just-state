@@ -4,7 +4,7 @@ import { shallow } from 'enzyme'
 import Connect from '../src/connect'
 
 describe('Connect', () => {
-  let output, logStateChangeMock, stateMock, ComponentMock, mapStateToPropsMock
+  let output, logStateChangeMock, stateMock, ComponentMock, mapStateToPropsMock, idMock
 
   const renderConnect = () => {
     return shallow(
@@ -18,10 +18,11 @@ describe('Connect', () => {
   }
 
   beforeEach(() => {
+    idMock = 'mock'
     mapStateToPropsMock = jest.fn()
     stateMock = { count: 1 }
     mapStateToPropsMock = jest.fn(state => ({ ...state }))
-    logStateChangeMock = jest.fn()
+    logStateChangeMock = jest.fn(() => idMock)
     ComponentMock = ({ count }) => <h1> {count} </h1> // eslint-disable-line react/prop-types
 
     output = renderConnect()
@@ -54,14 +55,18 @@ describe('Connect', () => {
   describe('when there is an async state change', () => {
     let updateState
 
-    const expectation = state => {
+    const stateExpectation = state => {
       expect(state.count).to.eql(2)
     }
 
-    const asyncChange = state => {
+    const idExpectation = state => {
+      expect(state.id).to.be.ok
+    }
+
+    const asyncChange = (state, id) => {
       return new Promise(resolve => {
         setTimeout(() => {
-          resolve({ count: state.count + 1 })
+          resolve({ count: state.count + 1, id })
         }, 5)
       })
     }
@@ -71,7 +76,11 @@ describe('Connect', () => {
     })
 
     it('performs the state update', () => {
-      return updateState(asyncChange, expectation)
+      return updateState(asyncChange, stateExpectation)
+    })
+
+    it.only('passes the unique id to the state change', () => {
+      return updateState(asyncChange, idExpectation)
     })
 
     describe('when a change causes an error', () => {
