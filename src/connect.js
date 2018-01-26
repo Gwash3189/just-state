@@ -4,10 +4,9 @@
  * import Connect from './connect'
  */
 
-import cloneDeep from 'lodash/cloneDeep'
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
-
+import cloneDeep from 'lodash/cloneDeep'
 import logger from './logger'
 
 /**
@@ -27,6 +26,21 @@ export default class Connect extends Component {
    */
 
   /**
+   * A react life cycle hook that checks wether or not the component 
+   * should re-render. 
+   *
+   * If the state has changed from after running `updateState` this function will
+   * return true, as the `nextState` and `this.state` won't be the same object anymore.
+   *
+   * @param {object} nextProps the next set of properties the comonent will recieve
+   * @param {object} nextState the next set of state the comonent will recieve
+   * @return {Boolean} A boolean telling react wether or not if should re-render this component 
+   */
+  shouldComponentUpdate(nextProps, nextState) {
+    nextState !== this.state
+  }
+
+  /**
    * A variatic function that chains the provided functions together
    * and updates the state of the provided component
    *
@@ -40,7 +54,7 @@ export default class Connect extends Component {
    *                           update is complete. The promise is rejected when an error occurs
    *                           during the state update process.
    *
-   * @fulfuil {object} - The state tree
+   * @resolve {object} - The state tree
    * @reject  {Error} - The error generator by the error
    */
   updateState(...funcs) {
