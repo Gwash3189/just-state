@@ -7,7 +7,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-import { state } from './../../src/index'
 import { updateCount } from './updaters'
 import { selectCount } from './selectors'
 import stateful from './state'
