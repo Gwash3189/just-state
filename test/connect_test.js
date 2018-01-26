@@ -4,7 +4,12 @@ import { shallow } from 'enzyme'
 import Connect from '../src/connect'
 
 describe('Connect', () => {
-  let output, logStateChangeMock, stateMock, ComponentMock, mapStateToPropsMock, idMock
+  let output,
+      logStateChangeMock,
+      stateMock,
+      ComponentMock,
+      mapStateToPropsMock,
+      idMock
 
   const renderConnect = () => {
     return shallow(
@@ -12,8 +17,7 @@ describe('Connect', () => {
         mapStateToProps={mapStateToPropsMock}
         state={stateMock}
         component={ComponentMock}
-        logStateChange={logStateChangeMock}
-      />
+        logStateChange={logStateChangeMock} />
     )
   }
 
