@@ -86,9 +86,9 @@ export default class Connect extends Component {
   render() {
     const Component = this.props.component
     const mapStateToProps = this.props.mapStateToProps
-    const spreadState = mapStateToProps(this.props.state)
+    const props = mapStateToProps(this.props.state)
 
-    return <Component updateState={this.updateState} {...spreadState} />
+    return <Component updateState={this.updateState} {...props} />
   }
 }
 
