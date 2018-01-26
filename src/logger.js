@@ -6,9 +6,7 @@
 
 import uniqueId from 'lodash/uniqueId'
 
-const stateChangeId = () => {
-  return uniqueId('state-change')
-}
+const stateChangeId = uniqueId.bind(null, 'state-change')
 
 /**
  * Logs state changes in a readable way
