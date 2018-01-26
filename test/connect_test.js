@@ -79,7 +79,7 @@ describe('Connect', () => {
       return updateState(asyncChange, stateExpectation)
     })
 
-    it.only('passes the unique id to the state change', () => {
+    it('passes the unique id to the state change', () => {
       return updateState(asyncChange, idExpectation)
     })
 
